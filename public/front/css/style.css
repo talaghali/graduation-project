@@ -1,0 +1,831 @@
+body {
+  font-family: "Poppins" !important;
+  overflow-x: hidden !important;
+}
+/* navbar تنسيق*/
+.gray-backgroundcolor{
+    background-color: #3c3b39;
+}
+.text-color {
+  color: #DADADA !important;
+}
+
+/* تأثسر الماوس لما يجي ع القوائم */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  font-weight: bold;
+  border-bottom: 2px solid  #ffffff;
+}
+/* تنسيق  الموجودة بالناف بار  dropdown */
+/* حذفت السهم الي بجانبو  */
+ .dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-mega {
+  position: static !important;
+}
+
+.dropdown-menu {
+  background-color: #3C3B39;
+  width: 100%;
+  height: 270px;
+  border: none;
+  border-radius: 0;
+  padding: 2rem 4rem;
+  margin-top: 0 !important;
+}
+
+.dropdown-menu a {
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+}
+.dropdown-hover a:hover{
+    color: #b70003;
+}
+
+/* تنسيق النص الخاص ب  زر تسجيل الدخول وإنشاء الحساب */
+.btn-style {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 100% !important;
+}
+/* تنسيق النص الخاص ب إنشاء الحساب */
+.signup-style {
+  width: 125px;
+  height: 44px;
+  border: solid 2px #ffffff !important ;
+  border-radius: 16px !important;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transition: all 0.3s ease;
+  background-color: #3c3b39;
+}
+/* hover تنسيق ال  */
+.signup-style:hover {
+  color: #3c3b39 !important;
+  background-color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+
+/* تنسيق النص الخاص ب تسجيل الحساب  */
+.login-style {
+  background-color: #fffdfd;
+  color: #3c3b39 !important;
+  width: 125px;
+  height: 44px;
+  border-radius: 16px !important;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transition: all 0.3s ease;
+}
+/* hover تنسيق ال  */
+.login-style:hover {
+ color: #ffffff !important;
+  background-color: #b70003 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}  
+
+
+
+/* تنسيق صفحة انشاء حساب وتسجيل الدخول  */
+.around-border{
+box-shadow: 0px 4px 15px 0px #00000026;
+}
+.left-panel {
+  background-color: #A10102;
+  color: white;
+  height: 100vh;
+}
+.circle {
+  width: clamp(200px, 40vw, 400px);
+  height: clamp(200px, 40vw, 400px);
+  border-radius: 50%;
+  background: linear-gradient(312deg, #DC0004, #000000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+}
+.circle img {
+  width: 60%;
+  height: auto;
+}
+.form-titel{
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing:-2%;
+  color: #1D1D1D;
+}
+.form-caption{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -2%;
+  line-height: 140%;
+  color: #2D3748;
+}
+.form-red{
+  color: #A10102;
+}
+.sign-logBtn{
+  width: 358px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #A10102;
+}
+.sign-logBtn:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7a7b7c;
+}
+.google-btn{
+  width: 358px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2D3748;
+
+}
+.google-btn:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7a7b7c;
+}
+/* نهاية تنسيق صفحات إنشاء حساب وتسجيل دخول  */
+
+/* تنسيقات مشتركة في اغلب عناصر الموقع  */
+/* ستايل الخطوط الرئيسة الي بتشمل اغلب الصفحة */
+.main-text {
+  font-family: "Proza Libre" !important;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 25px;
+}
+/* العناويين الرئيسية لسكشن الهيرو والشير   */
+.main-headings {
+  font-size: 50px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 100%;
+}
+/*  تنسيق العناوييين الفرعية الخاصة بكل سكاشن الصفحة  */
+.sub-headings {
+  margin: 0 auto;
+  max-width: 534px;
+  height: auto;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+}
+/* العناوين الغامقة الخاصة باسلايدر الصور في سكشن قصصنا وفي سكشن القراءة اسفل الصور  */
+.pic-titels {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+}
+/*hero section تنسيق */
+/* حركات كاروسيل الصور (السلايدر الخاص بالهيرو سكشن ) */
+.hero.carousel-inner,
+.carousel-item,
+.carousel-inner img {
+  height: 477px;
+  width: 100%;
+  object-fit: cover;
+}
+.red-headings {
+  font-size: 35px;
+  color: #b70003;
+  font-weight: 700;
+}
+
+/* hero محتوي سكشن */
+/* النص الذي أسفل الهيرو سكشن  */
+.caption-underhero{
+  overflow-x: hidden;
+}
+.text-underhero {
+  width:100%;
+  max-width: 1034px;
+  height: auto;
+  font-family: "Proza Libre" !important;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 151%;
+  color: #1f1d1d;
+}
+
+/* share + donate تنسيق أزرار */
+.btns-hero {
+  width: 350px;
+  height: 56px;
+  background-color: #b70003;
+  transition: all 0.3s ease;
+}
+/*  hover تنسيق ال */
+.btns-hero:hover {
+  background-color: #870204 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+
+/* Gaza تنسيق شريط    */
+.gaza-background {
+  height: 204px;
+  background-color: #000000;
+}
+
+.numbers {
+  font-size: 34px;
+  font-weight: 600;
+}
+.fa-plus {
+  font-size: 13px;
+  color: #9eff00;
+}
+.under-number {
+  line-height: 17px;
+  font-size: 11px;
+  font-weight: 300;
+}
+.gazabar-gap {
+  gap: 148px;
+}
+
+/*تنسيق سكشن قصصنا   */
+.our-stories-section{
+  overflow-x: hidden;
+}
+/* leftSise */
+/* تنسيق زر التصفح اسفل النص  */
+.explore-btn {
+  width: 171px;
+  height: 44px;
+  background-color: #b70003;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+/* تنسيق زر التصفح اسفل النص عند مرور الماوس عليه  */
+.explore-btn:hover {
+  background-color: #870204 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+/* rightSide */
+/* تعديل طول وعرض الكاروسيل (السلايدر )*/
+.our-stories-section #carouselExampleCaptions {
+  width: 100%;
+  max-width: 580px;
+  height: 381px;
+  margin: 0 auto;
+}
+/* تنسيق الصور داخل السلايدر حجمها وهكذا  */
+.our-stories-section .carousel-inner,
+.carousel-item,
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*تنسيق النص في منتصف السلايدر  */
+/* النص الي اعلى واسفل النص الرئيسي بالسلايدر   */
+.img-text {
+  font-family: "Proza Libre" !important;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+/* تنسيق النص  اسفل عنوان قصصنا  */
+.stories-text {
+  height: auto;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 150%;
+}
+/* تم تعديلها عشان العنوان يضل ع نفس السطر وياخد مساحته براحة  */
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/* تنسيق خاص بالاسهم على جانبي الصفحة  */
+/* غلاف الأسهم الأساسي */
+.stories-slider.carousel-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* الأزرار */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 47px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+/* الهوفر */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #b70003;
+  color: #ffffff !important;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* الأيقونات */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(0);
+  width: 20px;
+  height: 20px;
+}
+
+/* المسافة من الجوانب */
+.carousel-control-prev {
+  left: 20px;
+}
+.carousel-control-next {
+  right: 20px;
+}
+
+/* الشرائح في الاسفل  غير المفعلّة */
+.carousel-indicators [type="button"] {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/*الشرائح في الاسفل  النقطة المفعلّة */
+.carousel-indicators .active {
+  background-color: #b70003;
+}
+/* نهاية تنسيق  الريسبونسيف الخاص بسكشن قصصنا  في الهوم بيج */
+
+/* بداية تنسيق القصص >>> صفحات الخارجية   */
+.large-stories .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.stories-titels{
+  font-size: 30px;
+  font-weight: 700;
+}
+.large-stories .carousel-inner,
+.large-stories .carousel-item {
+  height: 477px;
+}
+
+.large-stories .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-text{
+  font-family: "Proza Libre" !important;
+  font-size: 30px;
+  font-weight: 400;
+}
+.story-padding{
+  padding:3rem 1rem!important;
+}
+.theexplore{
+  font-weight: 400;
+  font-family: "Proza Libre" !important;
+}
+/* نهاية تنسيق القصص >>> صفحات الخارجية   */
+/*+see all page تنسيق سكشن قصص من قلب غزة في الهوم بيج  */
+.heart-gaza{
+  overflow: hidden;
+}
+.see-all {
+  font-size: 20px;
+  font-weight: 400;
+  color: #b70003;
+  line-height: 100%;
+  transition: all 0.3s ease;
+}
+.fa-angle-right{
+  color: #b70003;
+}
+
+.read-btn {
+  width: 171px;
+  height: 44px;
+  background-color: #b70003;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.read-btn a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Hover على الزر */
+.read-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+
+/* Hover على الرابط داخل الزر لتغيير اللون */
+.read-btn:hover a {
+  color: #000000;
+}
+
+/* share تنسيق سكشن مشاركة قصة مع تنسيق صفحته الخارجية  */
+.share-section-btn{
+  width: 252px;
+  height: 58px;
+  background-color: #b70003;
+  transition: all 0.3s ease;
+}
+/*  hover تنسيق ال */
+.share-section-btn:hover {
+  background-color: #870204 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+/* for background img share section  */
+.share-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 488px; 
+  overflow: hidden;
+}
+
+/* صفحة شارك قصة الكبيرة تنسيقات  */
+.share-background{
+background: linear-gradient(90deg, #3C3B39 0%, #B20003 100%);
+height: 333px;
+}
+.share-p{
+  font-family: "Proza Libre" !important;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+
+/* تنسيق صفحة الشير الفورم الخاص فيها  */
+.form-center{
+  max-width: 946px;
+  margin: 40px auto;
+}
+.form-border{
+box-shadow: 0px 4px 15px 0px #00000026;
+}
+.form-label{
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.optional
+{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* تنسيق تحميل الصور وقصتك text area +uoplod */
+ .toolbar {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #f8f9fa;
+  border-radius: .375rem .375rem 0 0;
+  padding: .4rem .6rem;
+}
+.story-textarea {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 .375rem .375rem;
+  min-height: 150px;
+  resize: none;
+}
+
+.upload-box {
+  border: 1px solid #ccc;
+  border-radius: .375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.upload-box:hover {
+  background-color: #f8f9fa;
+}
+
+.submit-btn{
+  width: 277px;
+  height: 60px;
+  background-color: #B20003;
+  font-size: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+}
+.submit-btn:hover{
+  background-color: #3C3B39;
+  font-size: 25px;
+  font-weight: 500;
+  transform: translateY(-3px);
+
+}
+/* popup تنسيق ال  */
+.custom-modal {
+  max-width: 806px; 
+  }
+
+.custom-modal .modal-content {
+  height: 327px; 
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); 
+}
+
+#successModalLabel{
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 150%;
+}
+#successModalLabel-two{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #5E5E5E;
+  font-family: "Proza Libre" !important;
+
+}
+
+/* تنسيق سكشن سلايدر الفيديوهات  */
+.highlight-fs{
+  font-size: 30px;
+  font-weight: 700;
+}
+.watch-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 171px;
+  height: 44px;
+  border-radius: 10px;
+}
+.bi-caret-right{
+  font-size: 25px;
+}
+.card-hover:hover .card-content {
+  opacity: 0;
+}
+.card-hover:hover .hover-text {
+  opacity: 1; 
+}
+.hover-text {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.card-hover:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+  
+}
+.watch-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 47px;
+  background-color: #B70003;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: opacity 0.15s ease-in-out, width 0.15s ease-in-out, height 0.15s ease-in-out;
+}
+.card-hover:hover .watch-circle {
+  opacity: 1;
+  width: 55px;
+  height: 52px;
+  
+}
+/*  الاسهم */
+/* وضع الأسهم أسفل الكاروسيل */
+.highlight #highlightCarousel .carousel-control-prev,
+#highlightCarousel .carousel-control-next {
+    top: auto;
+    bottom: -20px; 
+    transform: none;
+    width: 50px;
+    height: 47px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+#highlightCarousel .carousel-item>.d-flex {
+    overflow: hidden;
+    width: 100% !important;
+}
+/* للشاشات الصغيرة سكشن الفيديوهات */
+.overlay-h{
+  height: 30rem;
+}
+
+
+/* تنسيق سكشن التبرع والصفحة الخارجية الخاصة فيه  */
+.donate-background {
+  background-image: url('../img/donatePic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.donate-num{
+  font-size: 150px;
+}
+.donate-caption{
+  max-width: 811px;
+  font-size: 25px;
+  font-family: "Proza Libre" !important;
+
+}
+.donate-section-btn{
+width: 252px;
+  height: 58px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+.donate-section-btn:hover {
+  background-color: #d8d8d8 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+/* تنسيق صفحة التبرع الكبيرة */
+.pay-fs{
+  font-size: 20px;
+}
+.donate-img {
+  width: 100%;
+  height: 333px;
+  background-image: url("../img/donatePage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.donate-center{
+  max-width: 946px;
+  margin: 40px auto;
+}
+.price-style{
+  width: 117px;
+  height: 56px;
+  background-color: #C7C7C7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+.price-style:hover{
+  background-color: #e1e1e1;
+}
+
+.other-h{
+  height: 56px;
+  border-radius: 10px;
+}
+.pay-icons{
+  font-size: 60px;
+}
+.paypal-icons{
+  color: #28356A;
+}
+.visa-color{
+  color: #EB001B;
+}
+.paypal-color{
+  color: #28356A;
+}
+.select-story {
+  color: #aaa;
+}
+
+.select-story:focus {
+  color: #000;
+}
+
+
+.select-story option {
+  color: #000;
+}
+
+.pay-details{
+  font-weight: 500;
+}
+.pay-content{
+  font-weight: 400;
+}
+.card-input {
+  border: none; 
+  border-bottom: 1px solid #9f9f9f;
+  border-radius: 0; 
+  background: none; 
+  outline: none; 
+  width: 100%; 
+  padding: 6px 0; 
+  font-size: 16px; 
+  box-shadow: none; 
+}
+
+.card-input:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: none; 
+}
+
+.donate-pay a{
+  width: 191px;
+  height: 44px;
+  background-color: #B70003;
+}
+
+.dropdown-bg{
+  background-color: #e6e6e6;
+  height: 20px;
+}
+
+
+/* footer */
+.footer-background{
+  background-color: #3C3B39;
+}
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-p{
+ max-width:541px ; 
+}
+.footer-share{
+  width: 252px;
+  height: 58px;
+  background-color: #B70003;
+    transition: all 0.3s ease;
+
+}
+.footer-donate{
+  width: 252px;
+  height: 58px;
+  background-color: #B70003;
+  transition: all 0.3s ease;
+
+}
+
+
+/*  hover تنسيق ال */
+.footer-share:hover {
+  background-color: #870204 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+.footer-donate:hover {
+  background-color: #870204 !important;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 6px 0px #00000050;
+}
+
+
+/* تم تنسيق هاي الصفحة بناء على كل سكشن ويتبعه مباشرة ما  فيه من روابط لصفحات خارجية  */

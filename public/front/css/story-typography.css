@@ -1,0 +1,335 @@
+/* ====================================
+   STORY PAGE TYPOGRAPHY ENHANCEMENTS
+   ==================================== */
+
+/* Story Container */
+.thestory {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+/* Main Story Text */
+.story-text {
+    font-family: 'Georgia', 'Proza Libre', serif;
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #2c2c2c;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+    hyphens: auto;
+    padding: 2rem 3rem;
+    position: relative;
+}
+
+/* Drop Cap - First Letter */
+.story-text::first-letter {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    float: left;
+    margin: 0 0.15rem 0 0;
+    color: #b70003;
+    font-family: 'Georgia', serif;
+}
+
+/* Story Padding */
+.story-padding {
+    padding: 2.5rem 4rem !important;
+}
+
+/* Story Title */
+.stories-titels {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Paragraph Spacing - Split text into visual paragraphs */
+.story-text {
+    white-space: pre-line;
+}
+
+/* Add visual breaks for names/sections */
+.story-text strong,
+.story-text b {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #b70003;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+/* Quotes and Special Text */
+.story-text em,
+.story-text i {
+    font-style: italic;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Reading Experience Enhancements */
+.story-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #b70003 0%, transparent 100%);
+    border-radius: 2px;
+}
+
+/* Horizontal Rules in Stories */
+.thestory hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #b70003, transparent);
+    margin: 3rem auto;
+    opacity: 0.7;
+    max-width: 60%;
+}
+
+/* Explore Stories Section */
+.explore-link {
+    margin: 2rem 0;
+}
+
+.explore-link a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3c3b39 !important;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.explore-link a:hover {
+    color: #b70003 !important;
+    transform: translateX(10px);
+}
+
+.explore-link i {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.explore-link a:hover i {
+    transform: rotate(15deg);
+}
+
+/* Story Card at Bottom */
+.theexplore {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+    .story-text {
+        font-size: 1.1rem;
+        padding: 2rem 2.5rem;
+    }
+
+    .story-padding {
+        padding: 2rem 2.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .thestory {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+    }
+
+    .story-text {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        padding: 1.5rem 1rem;
+        text-align: left;
+    }
+
+    .story-padding {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .stories-titels {
+        font-size: 2rem;
+    }
+
+    .story-text::first-letter {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-text {
+        font-size: 1rem;
+        line-height: 1.8;
+        padding: 1rem;
+    }
+
+    .story-padding {
+        padding: 1rem !important;
+    }
+
+    .stories-titels {
+        font-size: 1.75rem;
+    }
+
+    .story-text::first-letter {
+        font-size: 3rem;
+        margin: 0 0.1rem 0 0;
+    }
+}
+
+/* Print Styles for Stories */
+@media print {
+    .thestory {
+        box-shadow: none;
+        background: white;
+    }
+
+    .story-text {
+        font-size: 12pt;
+        line-height: 1.6;
+        color: black;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next,
+    .explore-link {
+        display: none !important;
+    }
+}
+
+/* Accessibility Improvements */
+.story-text::selection {
+    background-color: #b70003;
+    color: white;
+}
+
+.story-text::-moz-selection {
+    background-color: #b70003;
+    color: white;
+}
+
+/* Smooth Reading Mode */
+@media (prefers-reduced-motion: reduce) {
+    .story-text,
+    .explore-link a,
+    .explore-link i {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .story-text {
+        color: #000000;
+        background: #ffffff;
+    }
+
+    .story-text::first-letter {
+        color: #990000;
+    }
+}
+
+/* Large Stories Section */
+.large-stories {
+    margin-bottom: 2rem;
+}
+
+.large-stories .carousel-item {
+    height: 500px;
+}
+
+.large-stories .carousel-control-prev,
+.large-stories .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(183, 0, 3, 0.85);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.large-stories .carousel-control-prev:hover,
+.large-stories .carousel-control-next:hover {
+    background: rgba(183, 0, 3, 1);
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+/* Story Card Overlay */
+.sec-m .position-relative {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.sec-m .position-relative:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sec-m .position-relative img {
+    transition: transform 0.5s ease;
+}
+
+.sec-m .position-relative:hover img {
+    transform: scale(1.1);
+}
+
+/* Additional Text Formatting */
+.story-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Blockquote Style (if needed) */
+.story-text blockquote {
+    border-left: 4px solid #b70003;
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #555;
+    background: rgba(183, 0, 3, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Story Meta Information */
+.story-meta {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Reading Progress Indicator (Optional) */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #b70003;
+    z-index: 9999;
+    transition: width 0.2s ease;
+}

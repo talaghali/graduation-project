@@ -1,0 +1,387 @@
+@media (min-width: 992px) {
+  body {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* max width لكل السكاشن  */
+@media (min-width: 992px) {
+  .section-maxwidth {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/*ريسبونسيف زر تسجيل الدخول وانشاء الحساب  */
+@media (min-width: 992px) and (max-width: 1065px) {
+  .signup-style {
+    width: 100px;
+    height: 44px;
+  }
+  .login-style {
+    width: 100px;
+    height: 44px;
+  }
+}
+
+/*login+signup  عرض ال */
+@media (min-width: 900px) {
+.sign-logSec{
+  max-width: 1200px;
+  margin: 40px auto;
+}
+}
+@media (min-width: 900px) {
+.sign-logBtn{
+  width: 258px;
+  height: 48px;
+}
+
+.google-btn{
+  width: 258px;
+  height: 48px;
+}
+}
+
+/*للشاشات الصغيرة  تنسيق صفحة انشاء حساب وتسجيل الدخول  */
+@media (max-width: 570px) {
+.left-panel {
+  height:100%;
+} 
+}
+
+/*   يشمل السلايدر وحجم الخط  hero section تنسيق  */
+@media (max-width: 768px) {
+ .hero .carousel-inner,
+  .carousel-item,
+  .carousel-inner img {
+    height: auto;
+    min-height: 50vh;
+  }
+}
+/*حجم الخط*/
+@media (max-width: 768px) {
+    .main-headings {
+    font-size: 30px;
+  }
+}
+@media (min-width: 668px) and (max-width: 1111px) {
+  .main-headings {
+    font-size: clamp(30px, 4vw, 50px);
+  }
+}
+
+
+/* شاشات كبيرة  */
+@media (min-width: 992px) {
+  .text-underhero {
+    padding-bottom: 10px;
+  }
+}
+
+/* شاشات متوسطة */
+@media (max-width: 992px) {
+  .text-underhero {
+    font-size: 24px;
+  }
+
+  .share-hero,
+  .donate-hero {
+    width: 300px;
+    height: 52px;
+  }
+}
+
+/* شاشات  متوسطة تابلت */
+@media (max-width: 768px) {
+  .text-underhero {
+    font-size: 20px;
+  }
+
+  .share-hero,
+  .donate-hero {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+/* شاشات صغيرة موبايل */
+@media (max-width: 500px) {
+    .text-underhero {
+    font-size: 18px ;
+    width: 95%;
+  }
+
+  .share-hero,
+  .donate-hero {
+    width: 200px !important;
+    height: 46px;
+    font-size: 14px;
+  }
+  /* Buttons stack vertically */
+  .d-flex.gap-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+}
+
+/* شريط غزة ريسبونسيف   */
+@media (max-width: 1200px) {
+  .numbers {
+    font-size: 28px;
+  }
+  .fa-plus {
+    font-size: 11px;
+  }
+  .under-number {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .gazabar-gap {
+    gap: 120px;
+  }
+}
+
+/* شاشات متوسطة */
+@media (max-width: 991px) {
+  .numbers {
+    font-size: 24px;
+  }
+  .fa-plus {
+    font-size: 10px;
+  }
+  .under-number {
+    font-size: 9px;
+    line-height: 13px;
+  }
+  .gazabar-gap {
+    gap: 90px;
+  }
+}
+
+/*/* شاشات صغيرة  */
+@media (max-width: 767px) {
+  .numbers {
+    font-size: 20px;
+  }
+  .fa-plus {
+    font-size: 9px;
+  }
+  .under-number {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .gazabar-gap {
+    gap: 60px;
+  }
+}
+
+/* شاشات صغيرة كتير  */
+@media (max-width: 575px) {
+  .numbers {
+    font-size: 16px;
+  }
+  .fa-plus {
+    font-size: 7px;
+  }
+  .under-number {
+    font-size: 7px;
+    line-height: 10px;
+  }
+  .gazabar-gap {
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* نهاية ريسبونسيف شريط غزة  */
+
+/* سكشن قصصنا والسلايدر الخاص فيه  */
+@media (max-width:467px) {
+  .pic-titels {
+    font-size:20px !important ;
+  }
+}
+/* تعديل حجم الخطوط في السلايدر داخل سكشن قصصنا  */
+@media (max-width: 1020px) and (min-width: 768px) {
+  .img-text {
+    font-size: 14px !important;
+  }
+  .pic-titels{
+    font-size: 24px;
+  }
+}
+/* شاشات أصغر من 768px */
+@media (max-width: 767px) {
+  .img-text {
+    font-size: 12px;
+  }
+
+  .pic-titels{
+    font-size: 20px;
+  }
+}
+/*نهاية سكشن قصصنا والسلايدر الخاص فيه  */
+
+/* تنسيق الضفحات الخارجية لسكشن قصصنا السلايدر  */
+@media (min-width: 1240px) {
+  .story-padding{
+  padding:3rem 10rem !important;
+}
+}
+@media (min-width: 900px) {
+  .sec-m {
+    max-width: 1140px; 
+    margin: 0 auto;
+  }
+}
+/* صفحات القصص hr width*/
+@media (min-width: 900px) {
+  .thestory hr {
+    max-width: 1140px !important;
+    margin: 0 auto;
+    display: block; 
+  }
+}
+@media (max-width: 660px) {
+.stories-titels{
+  font-size: 20px;
+}
+}
+
+/*  سكشن مشاركة قصة كبير ريسبونسيف  */
+@media (max-width: 675px) {
+ .share-content .main-headings{
+   font-size:20px ;
+  }
+ .main-text .main-headings{
+   font-size:15px ;
+  }
+  .share-section-btn {
+    width: 182px;
+    height: 38px;
+}
+.share-section-btn {
+  font-size: 10px;
+}
+}
+@media (max-width: 768px) {
+  .share-wrapper {
+    height: 300px; 
+  }
+}
+
+.share-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ريسبونسيف الصفحة الخارجية الكبيرة من مشاركة قصة  */
+@media (min-width: 668px) and (max-width: 1111px) {
+    .share-p {
+        font-size: 25px;
+    }
+}
+@media (max-width: 668px) {
+.share-p{
+font-size: 20px;
+}
+} 
+
+/* ريسبونسيف سكشن التبرع والصفحة الخارجية الخاصة فيه  */
+@media (min-width: 992px) {
+ .donate .main-text {
+    max-width: 811px;
+  }
+}
+@media (max-width:570px) {
+ .paySm-fs{
+  font-size: 12px;
+ }
+}
+@media (max-width: 570px) {
+  #visa,
+  #apple,
+  #paypal {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width:468px) {
+ .donate-num {
+    font-size: 90px;
+  }
+  .donate-section-btn {
+    width: 175px;
+    height: 51px;
+}
+}
+
+/* ريسبونسيف الفوتر footer */
+@media (min-width: 900px) {
+  .footer-padding {
+    padding: 2rem 0 !important;
+}
+}
+@media (max-width: 668px) {
+  .mobile-flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .list-flex{
+    display: flex;
+    flex-direction: column;
+  }
+    .footer-donate{
+    font-size:10px ;
+    width: 136px;
+    height: 58px;
+  }
+    .footer-share{
+    font-size:10px ;
+    width: 136px;
+    height: 58px;
+  }
+}
+@media (max-width: 587px) {
+  .footer-share{
+    font-size:10px ;
+  }
+  .footer-donate{
+    font-size:10px ;
+        width: 136px;
+    height: 58px;
+  }
+  .footer-gap{
+    gap: 3rem ;
+  }
+
+}
+@media (max-width: 500px) {
+  .follow{
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 500px) {
+    .d-flex.follow {
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
+    .d-flex.footer-btns{
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
+    .copyright{
+     font-family: "Proza Libre" !important;
+     font-size: 10px;
+    }
+}
