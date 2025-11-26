@@ -83,28 +83,28 @@
                 class="position-absolute top-50 start-50 translate-middle w-100 d-flex justify-content-center gazabar-gap">
                 <div class="bar-content">
                     <div class="text-white d-flex align-items-center gap-1">
-                        <span class="numbers">2500</span>
+                        <span class="numbers">{{ number_format($stats['stories_count']) }}</span>
                         <span><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <p class="text-white under-number">Stories Shared</p>
                 </div>
                 <div class="bar-content">
                     <div class="text-white d-flex align-items-center gap-1">
-                        <span class="numbers">8,000</span>
+                        <span class="numbers">{{ number_format($stats['media_count']) }}</span>
                         <span><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <p class="text-white under-number">Photos & Videos Uploaded</p>
                 </div>
                 <div class="bar-content">
                     <div class="text-white d-flex align-items-center gap-1">
-                        <span class="numbers">1,200</span>
+                        <span class="numbers">{{ number_format($stats['audio_count']) }}</span>
                         <span><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <p class="text-white under-number">Audio Testimonies</p>
                 </div>
                 <div class="bar-content">
                     <div class="text-white d-flex align-items-center gap-1">
-                        <span class="numbers">100</span>
+                        <span class="numbers">{{ number_format($stats['contributors_count']) }}</span>
                         <span><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <p class="text-white under-number">Contributors from Gaza</p>
@@ -246,16 +246,64 @@
                 </p>
             </div>
             @if($stories && $stories->count() > 0)
-                <div class="row g-4">
-                    @foreach($stories as $index => $story)
-                        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 300 }}">
-                            <div class="position-relative">
+                <div class="row">
+                    <!-- Left Column - First Large Story -->
+                    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="600">
+                        @php $firstStory = $stories->first(); @endphp
+                        <div class="position-relative">
+                            @if($firstStory->media_path && $firstStory->media_type === 'image')
+                                <img class="img-fluid w-100" src="{{ asset('storage/' . $firstStory->media_path) }}"
+                                     alt="{{ $firstStory->title }}"
+                                     style="width: 580px; height:451px; object-fit: cover;" />
+                            @else
+                                <img class="img-fluid w-100" src="{{ asset('front/img/logo f.png') }}"
+                                     alt="{{ $firstStory->title }}"
+                                     style="width: 580px; height:451px; object-fit: cover;" />
+                            @endif
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.25"></div>
+
+                            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3 text-center">
+                                <button class="btn read-btn">
+                                    <a href="{{ route('stories.show', $firstStory->id) }}" class="text-decoration-none">
+                                        <i class="bi bi-eye"></i>
+                                        Read Story
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pt-3 d-flex justify-content-center">
+                            <p class="pic-titels">{{ $firstStory->name ?? $firstStory->title }}</p>
+                        </div>
+                        <div class="d-flex justify-content-center text-center">
+                            <p class="stories-text">
+                                {{ Str::limit(strip_tags($firstStory->content), 80) }}
+                            </p>
+                        </div>
+                        <hr class="hr-width">
+                        <div class="d-flex justify-content-center">
+                            <p class="stories-text text-center pt-5">
+                                "Every story here carries a piece of the truth people have lived.
+                                Tales of loss, hope, resilience, and love despite pain. We share
+                                them to give a voice to every experience that deserves to be
+                                remembered, and to keep the memory alive for the world. Explore
+                                the stories, or become the storyteller yourself—your story might
+                                inspire others."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Two Smaller Stories -->
+                    <div class="col-12 col-lg-6">
+                        @foreach($stories->skip(1)->take(2) as $index => $story)
+                            <div class="position-relative" data-aos="fade-left" data-aos-delay="{{ 900 + ($index * 300) }}">
                                 @if($story->media_path && $story->media_type === 'image')
-                                    <img class="img-fluid w-100" src="{{ asset('storage/' . $story->media_path) }}" alt="{{ $story->title }}"
-                                        style="height: 400px; object-fit: cover;" />
+                                    <img class="img-fluid w-100" src="{{ asset('storage/' . $story->media_path) }}"
+                                         alt="{{ $story->title }}"
+                                         style="width: 538px; height: 351px; object-fit: cover;" />
                                 @else
-                                    <img class="img-fluid w-100" src="{{ asset('front/img/logo f.png') }}" alt="{{ $story->title }}"
-                                        style="height: 400px; object-fit: cover;" />
+                                    <img class="img-fluid w-100" src="{{ asset('front/img/logo f.png') }}"
+                                         alt="{{ $story->title }}"
+                                         style="width: 538px; height: 351px; object-fit: cover;" />
                                 @endif
                                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.25"></div>
 
@@ -268,32 +316,16 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="pt-3 d-flex justify-content-center">
+                            <div class="pt-3 d-flex justify-content-center" data-aos="fade-left" data-aos-delay="{{ 900 + ($index * 300) }}">
                                 <p class="pic-titels">{{ $story->name ?? $story->title }}</p>
                             </div>
-                            <div class="d-flex justify-content-center text-center">
+                            <div class="d-flex justify-content-center text-center" data-aos="fade-left" data-aos-delay="{{ 900 + ($index * 300) }}">
                                 <p class="stories-text">
                                     {{ Str::limit(strip_tags($story->content), 80) }}
                                 </p>
                             </div>
-                        </div>
-
-                        @if($index === 0)
-                            <div class="col-12">
-                                <hr class="hr-width">
-                                <div class="d-flex justify-content-center">
-                                    <p class="stories-text text-center pt-5">
-                                        "Every story here carries a piece of the truth people have lived.
-                                        Tales of loss, hope, resilience, and love despite pain. We share
-                                        them to give a voice to every experience that deserves to be
-                                        remembered, and to keep the memory alive for the world. Explore
-                                        the stories, or become the storyteller yourself—your story might
-                                        inspire others."
-                                    </p>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             @else
                 <div class="text-center py-5">
@@ -463,8 +495,8 @@
                 <div
                     class="donate-content d-flex justify-content-center align-items-center flex-column py-3 text-white ">
                     <p class="pt-5">STORIES&VIDEOS</p>
-                    <p class="donate-num">2500</p>
-                    <p class="main-text text-center pb-5">"Here you will find the truth — the real stories of Gaza and
+                    <p class="donate-num">{{ number_format($stats['stories_count']) }}</p>
+                    <p class="main-text text-center pb-5 text-white">"Here you will find the truth — the real stories of Gaza and
                         the
                         suffering of its
                         people. Share hope and

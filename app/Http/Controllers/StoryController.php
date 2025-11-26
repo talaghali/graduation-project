@@ -24,7 +24,15 @@ class StoryController extends Controller
             ->ordered()
             ->get();
 
-        return view('website.pages.index', compact('stories', 'highlights'));
+        // Calculate statistics from database
+        $stats = [
+            'stories_count' => Story::approved()->count(),
+            'media_count' => Story::approved()->whereNotNull('media_path')->count(),
+            'audio_count' => Story::approved()->where('media_type', 'audio')->count(),
+            'contributors_count' => Story::approved()->whereNotNull('name')->distinct('name')->count('name'),
+        ];
+
+        return view('website.pages.index', compact('stories', 'highlights', 'stats'));
     }
 
     /**

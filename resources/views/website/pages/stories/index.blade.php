@@ -118,7 +118,9 @@
 
                 <!-- Pagination -->
                 <div class="d-flex justify-content-center mt-5">
-                    {{ $stories->links() }}
+                    <nav aria-label="Stories pagination">
+                        {{ $stories->onEachSide(2)->links('pagination::bootstrap-5') }}
+                    </nav>
                 </div>
             @else
                 <div class="text-center py-5">
@@ -130,3 +132,47 @@
         </div>
     </section>
 @endsection
+
+@push('styles')
+<style>
+    /* Custom Pagination Styling */
+    .pagination {
+        gap: 0.5rem;
+    }
+
+    .pagination .page-link {
+        color: #b70003;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        margin: 0 0.25rem;
+    }
+
+    .pagination .page-link:hover {
+        background-color: #b70003;
+        color: white;
+        border-color: #b70003;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(183, 0, 3, 0.2);
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #b70003;
+        border-color: #b70003;
+        color: white;
+        box-shadow: 0 4px 12px rgba(183, 0, 3, 0.3);
+    }
+
+    .pagination .page-item.disabled .page-link {
+        color: #6c757d;
+        background-color: #f8f9fa;
+        border-color: #dee2e6;
+    }
+
+    .pagination .page-link:focus {
+        box-shadow: 0 0 0 0.2rem rgba(183, 0, 3, 0.25);
+    }
+</style>
+@endpush
